@@ -1,13 +1,7 @@
 <template>
-  <div class="teacher-abstract">
-    <group class="group cell-box" >
-      <cell  title='微信昵称'  class="cell-tle">
-        <span slot="icon" class="head-portrait">
-          <img src="../../../build/logo.png">
-        </span>
-      </cell>
-    </group>
-  </div>
+   <div>
+     xxx
+   </div>
 </template>
 
 <script>

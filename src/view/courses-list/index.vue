@@ -9,7 +9,7 @@ import { ViewBox, Panel } from 'vux'
 export default {
   name: 'coursesList',
   created () {
-    console.log(1111, this)
+    console.log(this.$route.query)
     const {title, label} = this.$route.query
     document.title = `${title}  ${label}`
   },

@@ -66,11 +66,11 @@ const classSourses = [
         icon: require('@/assets/logo.png')
       },
       {
-        label: '成长规律',
+        label: '家长课堂',
         icon: require('@/assets/logo.png')
       },
       {
-        label: '成长规律',
+        label: '专家咨询',
         icon: require('@/assets/logo.png')
       }
     ]
@@ -83,11 +83,11 @@ const classSourses = [
         icon: require('@/assets/logo.png')
       },
       {
-        label: '成长规律',
+        label: '家长课堂',
         icon: require('@/assets/logo.png')
       },
       {
-        label: '成长规律',
+        label: '专家咨询',
         icon: require('@/assets/logo.png')
       }
     ]

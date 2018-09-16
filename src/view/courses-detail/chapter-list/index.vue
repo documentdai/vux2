@@ -6,36 +6,6 @@
           <span>第一节</span>
           <span>开始建立学习计划</span>
         </li>
-        <li @click="onCellClick" >
-          <x-icon slot="icon" type="ios-ionic-outline" size="30"></x-icon>
-          <span>第一节</span>
-          <span>开始建立学习计划</span>
-        </li>
-        <li @click="onCellClick" >
-          <x-icon slot="icon" type="ios-ionic-outline" size="30"></x-icon>
-          <span>第一节</span>
-          <span>开始建立学习计划</span>
-        </li>
-        <li @click="onCellClick" >
-          <x-icon slot="icon" type="ios-ionic-outline" size="30"></x-icon>
-          <span>第一节</span>
-          <span>开始建立学习计划</span>
-        </li>
-        <li @click="onCellClick" >
-          <x-icon slot="icon" type="ios-ionic-outline" size="30"></x-icon>
-          <span>第一节</span>
-          <span>开始建立学习计划</span>
-        </li>
-        <li @click="onCellClick" >
-          <x-icon slot="icon" type="ios-ionic-outline" size="30"></x-icon>
-          <span>第一节</span>
-          <span>开始建立学习计划</span>
-        </li>
-        <li @click="onCellClick" >
-          <x-icon slot="icon" type="ios-ionic-outline" size="30"></x-icon>
-          <span>第一节</span>
-          <span>开始建立学习计划</span>
-        </li>
     </ul>
   </div>
 </template>

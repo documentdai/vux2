@@ -1,19 +1,20 @@
 <template>
   <div class="courses-detail">
     <div style="text-align:center;">
-      <video  height="300" ref="myViedeo" controls="controls" >
-        <source :src="viedeo1" type="video/mp4" />
-     </video>
+      <video height="300" controls="controls" :src='viedeoLink'>
+      </video>
     </div>
-    <div class="">
-      <p>成长规律之英语习惯的培养</p>
-      <p class="min-text">为0-3岁从小习惯的培养</p>
-      <span>
+    <div class="title-description">
+      <p class="headlines">成长规律之英语习惯的培养</p>
+      <p class="subtitle">为0-3岁从小习惯的培养</p>
+      <span class="icon-title">
         <icon type="success"></icon>
       </span>
     </div>
     <div class="lecturer-techer">
-      <img :src="imgTeacher" slot="icon">
+      <view-box class="courses-list">
+        <panel :list="list" @on-click-item="onClickTeacher"></panel>
+      </view-box>
     </div>
     <div class="teacher-tab">
       <tab>
@@ -30,7 +31,8 @@
 </template>
 
 <script>
-import { Icon, Tab, TabItem } from 'vux'
+
+import {Icon, Tab, TabItem, ViewBox, Panel} from 'vux'
 import ChapterList from '../courses-detail/chapter-list/index'
 import CommentList from '../courses-detail/comment-list/index'
 import DetailList from '../courses-detail/detail-list/index'
@@ -38,28 +40,39 @@ export default {
   name: 'coursesDetail',
   data () {
     return {
-      viedeo1: 'http://www.w3school.com.cn/i/movie.ogg',
-      current: 1
+      viedeoLink: '',
+      current: 1,
+      list: [{
+        title: 'xxxx',
+        desc: '888888888<span>55555</span>88888888',
+        src: require('@/assets/logo.png')
+      }]
     }
   },
   components: {
     Icon,
     Tab,
     TabItem,
+    ViewBox,
+    Panel,
     ChapterList,
     CommentList,
     DetailList
   },
   created () {
-        // this.$on('CoursesVideoClick', this.onCoursesVideoClick)
-    document.title = ''
+    console.log(111, this)
+    this.$on('CoursesVideoClick', this.onCoursesVideoClick)
+        // document.title = ''
   },
   methods: {
     onItemClick (tab) {
       this.current = tab
     },
     onCoursesVideoClick (coursesVideoClick) {
-      this.viedeo1 = coursesVideoClick
+      this.viedeoLink = coursesVideoClick
+    },
+    onClickTeacher () {
+      this.$router.push('/teacher-abstract')
     }
   }
 }
@@ -103,5 +116,23 @@ export default {
         }
     }
 }
+.title-description{
+     position: relative;
+     margin-left:9px;
+       .headlines{
+         font-size:14px;
+         font-weight:bold;
+       }
+       .subtitle{
+         color:#ccc;
+         font-size:12px;
+         margin-top:6px;
+       }
+       .icon-title{
+         position: absolute;
+         right: 5%;
+         top:0;
+       }
+   } 
 </style>
 
